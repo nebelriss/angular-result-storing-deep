@@ -1,0 +1,9 @@
+<ng-container *ngIf="value$ | async; let val">
+  <div>object: {{ val | json }}</div>
+  <div>val.firstVal type = {{ getType(val.firstVal) }}</div>
+  <div>val.secondVal type = {{ getType(val.secondVal) }}</div>
+  <div>
+    calculation firstVal + secondVal =
+    {{ calculate(val.firstVal, val.secondVal) }}
+  </div>
+</ng-container>
